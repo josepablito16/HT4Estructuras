@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Jose Cifuentes
+ * @author Jump 
+ * @version 17.02.2018
  */
 package ht4estructuras;
 
-/**
- *
- * @author jose
- */
+
 public class Factory 
 {
     Factory(){}
@@ -28,6 +25,14 @@ public class Factory
         else if (opcion.equals("3.1"))
         {
             return new SinglyLinkedList();
+        }
+        else if (opcion.equals("3.2"))
+        {
+            return new Circular();
+        }
+        else if (opcion.equals("3.3"))
+        {
+            return new DoubleLinkedList();
         }
         else
         {

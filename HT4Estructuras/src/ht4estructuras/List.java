@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Jose Cifuentes
+ * @author Jump 
+ * @version 17.02.2018
  */
 package ht4estructuras;
 
-/**
- *
- * @author jose
- */
+
 public interface List<E> extends Stack<E>
 {
     public int size();

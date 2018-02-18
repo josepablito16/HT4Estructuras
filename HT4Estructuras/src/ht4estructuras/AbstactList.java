@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Jose Cifuentes
+ * @author Jump 
+ * @version 17.02.2018
  */
 package ht4estructuras;
 
-/**
- *
- * @author jose
- */
+
 public abstract class AbstactList<E> implements List<E>
 {
     public AbstactList()
@@ -35,7 +32,7 @@ public abstract class AbstactList<E> implements List<E>
    public E pop()
    {
        
-       return getLast();
+       return removeLast();
    }
   
    /**
@@ -66,6 +63,8 @@ public abstract class AbstactList<E> implements List<E>
    {
        return 0;
    }
+   
+ 
    
     
     

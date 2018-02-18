@@ -12,10 +12,27 @@ import static java.lang.Double.NaN;
 public class Calculadora 
 {
      
-    //Stack<Double> x = new StackArrayList<Double>();
+    
     double d2;
     double n1,n2;
     Factory f=new Factory();
+    private static Calculadora calc;
+    
+    public static Calculadora getInstance()
+    {
+        if (calc==null) 
+        {
+            calc =new Calculadora();
+            
+        }
+        return calc;
+    }
+    
+    
+    private Calculadora()
+    {
+    }
+    
     
     public double operar(String expresion, String tipo) 
     {

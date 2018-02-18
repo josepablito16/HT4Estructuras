@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @author Jose Cifuentes
+ * @author Jump 
+ * @version 17.02.2018
  */
 package ht4estructuras;
 
-/**
- *
- * @author jose
- */
+
 public class SinglyLinkedList<E> extends AbstactList<E>
 {
     
@@ -70,15 +67,15 @@ public class SinglyLinkedList<E> extends AbstactList<E>
    
    public E removeLast()
    {
-        Node node = head;
-        Node temp = null;
-        while (node.next() != null){
-            temp = node;
-            node = node.next();
+       Node node1 = head;
+        Node node2 = node1;
+        while (node1.next() != null){
+            node2 = node1;
+            node1 = node1.next();
         }
-        temp.nextElement = null;
+        node2.nextElement = null;
         count--;
-        return (E)node.data;
+        return (E)node1.data;
            
    }
    

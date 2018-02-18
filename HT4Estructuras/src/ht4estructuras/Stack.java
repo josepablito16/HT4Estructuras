@@ -1,11 +1,10 @@
-
-package ht4estructuras;
-
 /**
  * @author Jose Cifuentes
  * @author Jump 
  * @version 17.02.2018
  */
+
+package ht4estructuras;
 
 public interface Stack<E> 
 {
