@@ -21,9 +21,7 @@ public class StackVector<E> implements Stack<E>
     
     /**
     * Metodo para agregar un elemento
-    * @param item 
-    * @pre nada.
-    * @post item es agregado al stack
+    * @param item elemento a ingresar a la lista
     */
     public void push(E item)
     {
@@ -32,8 +30,6 @@ public class StackVector<E> implements Stack<E>
    
    /**
     * Metodo que regresa el ultimo elemento y lo elimina.
-    * @pre el stack tiene mas de un elemento
-    * @post el ultimo item es eliminado y retornado
     */
    public E pop()
    {
@@ -43,8 +39,6 @@ public class StackVector<E> implements Stack<E>
   
    /**
     * Metodo que regresa el item que ingreso de ultimo  
-    * @pre el stack tiene mas de un elemento 
-    * @post regresa el item que ingreso de ultimo
     */
    public E peek()
    {
@@ -53,7 +47,6 @@ public class StackVector<E> implements Stack<E>
    
    /**
     * Metodo para saber si contiene algo el stack
-    * @post regresa true si no tiene ningun item
     */
    public boolean empty()
    {
@@ -62,7 +55,6 @@ public class StackVector<E> implements Stack<E>
    
    /**
     * Metodo para saber cuantos elementos hay en el stack
-    * @post retorna el numero de elementos en el stack
     */
    public int size()
    {

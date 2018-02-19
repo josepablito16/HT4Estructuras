@@ -9,7 +9,12 @@ package ht4estructuras;
 public class Factory 
 {
     Factory(){}
-    
+    /**
+     * este es el metodo del diseño de patrones el cual nos devuelve la instancia
+     * del tipo de lista a usar
+     * @param opcion opcion elegida por el usuario
+     * @return instancia de lista a usar
+     */
     public static Stack getStack(String opcion) 
     {
         

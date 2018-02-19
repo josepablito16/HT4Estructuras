@@ -17,7 +17,11 @@ public class Circular<E> extends AbstactList<E>
        tail = null;
        count = 0;
     }
-    
+    /**
+     * este metodo se encarga de agregar en la lista cirular el valor como
+     * primero
+     * @param value valor a guardar 
+     */
     public void addFirst(E value)
     // pre: value non-null
     // post: adds element to head of list
@@ -34,6 +38,9 @@ public class Circular<E> extends AbstactList<E>
      }
     
     @Override
+    /**
+     * agrega un valor al final de la lista
+     */
     public void addLast(E value)
     // pre: value non-null
     // post: adds element to tail of list
@@ -44,7 +51,10 @@ public class Circular<E> extends AbstactList<E>
     }
     
     // lo dificil es quitar el elemento de la cola
-
+    /**
+     * remueve el ultimo valor agregado
+     * @return devuelve el valor a su nodo
+     */
     public E removeLast()
     // pre: !isEmpty()
     // post: returns and removes value from tail of list
@@ -67,6 +77,9 @@ public class Circular<E> extends AbstactList<E>
     }
 
     @Override
+    /**
+     * limpia la lsita de los nodos y datos en el
+     */
     public void clear() 
     {
         tail = null;
@@ -74,11 +87,17 @@ public class Circular<E> extends AbstactList<E>
     }
 
     @Override
+    /**
+     * devuelve el valor ultimo de la lista
+     */
     public E getLast() 
     {
         return tail.value();
     }
-    
+    /**
+     * esto devuelve el valor del tamaño de la lista
+     * @return cantidad de datos en la lista
+     */
     public int size()
    {
        return count;

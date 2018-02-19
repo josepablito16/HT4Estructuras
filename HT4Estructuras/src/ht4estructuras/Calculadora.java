@@ -17,7 +17,10 @@ public class Calculadora
     double n1,n2;
     Factory f=new Factory();
     private static Calculadora calc;
-    
+    /**
+     * este es el singleto
+     * @return regresa la isntancia de la clase claculadora
+     */
     public static Calculadora getInstance()
     {
         if (calc==null) 
@@ -33,7 +36,13 @@ public class Calculadora
     {
     }
     
-    
+    /**
+     * en esta clase se ejecutan las operaciones que devolveran el resultado
+     * del texto leido 
+     * @param expresion expresion a operar
+     * @param tipo tipo de stack a utilizar
+     * @return valor final de la operacion
+     */
     public double operar(String expresion, String tipo) 
     {
         Stack<Double> x = f.getStack(tipo);

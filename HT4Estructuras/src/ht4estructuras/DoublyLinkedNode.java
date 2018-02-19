@@ -28,20 +28,30 @@ public class DoublyLinkedNode<E>
         {
             this(v,null,null);
         }
-        
+        /**
+         * devulev el siguiente valor de la lista
+         * @return referencia la siguietne valor de la lista
+         */
         public DoublyLinkedNode<E> next()
-   // post: returns reference to next value in list
+   
    {
       return nextElement;
    }
+    /**
+     * sets reference to new next value
+     * @param next valor siguiete al referido
+     */    
     public void setNext(DoublyLinkedNode<E> next)
-   // post: sets reference to new next value
+   
    {
       nextElement = next;
    }
-
+    /**
+     * returns value associated with this element
+     * @return devuelve el valor del elemento
+     */
    public E value()
-   // post: returns value associated with this element
+   
    {
       return data;
    }

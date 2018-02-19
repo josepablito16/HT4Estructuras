@@ -18,15 +18,18 @@ public class SinglyLinkedList<E> extends AbstactList<E>
       head = null;
       count = 0;
    }
-   
+   /**
+     * esto devuelve el valor del tamaño de la lista
+     * @return cantidad de datos en la lista
+     */
    public int size()
    // post: returns number of elements in list
   {
     return count;
   }
-  
-
-  
+  /**
+     * agrega un valor al final de la lista
+     */
   public void addLast(E value)
   // post: adds value to end of list
   {
@@ -47,13 +50,17 @@ public class SinglyLinkedList<E> extends AbstactList<E>
 	  count+=1;
 	  
    }
-   
+   /**
+     * limpia la lsita de los nodos y datos en el
+     */
    public void clear()
    {
        head=null;
        count=0;
    }
-   
+   /**
+     * devuelve el valor ultimo de la lista
+     */
    public E getLast()
    {
        Node node=head;
@@ -64,7 +71,10 @@ public class SinglyLinkedList<E> extends AbstactList<E>
        
        return (E)node.data;
    }
-   
+   /**
+     * remueve el ultimo valor agregado
+     * @return devuelve el valor a su nodo
+     */
    public E removeLast()
    {
        Node node1 = head;

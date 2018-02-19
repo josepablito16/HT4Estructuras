@@ -22,7 +22,11 @@ public DoubleLinkedList()
    count = 0;
 }
 
-
+    /**
+     * este metodo se encarga de agregar en la lista cirular el valor como
+     * primero
+     * @param value valor a guardar 
+     */
 public void addFirst(E value)
 // pre: value is not null
 // post: adds element to head of list
@@ -34,7 +38,9 @@ public void addFirst(E value)
    count++;
 }
 
-
+/**
+     * agrega un valor al final de la lista
+     */
 public void addLast(E value)
 // pre: value is not null
 // post: adds new value to tail of list
@@ -46,7 +52,11 @@ public void addLast(E value)
    count++;
 }
 
-
+// lo dificil es quitar el elemento de la cola
+    /**
+     * remueve el ultimo valor agregado
+     * @return devuelve el valor a su nodo
+     */
 public E removeLast()
 // pre: list is not empty
 // post: removes value from tail of list
@@ -61,12 +71,18 @@ public E removeLast()
    count--;
    return temp.value();
 }
-
+/**
+     * esto devuelve el valor del tamaño de la lista
+     * @return cantidad de datos en la lista
+     */
 public int size() 
 {
     return count;
 }
-
+/**
+* limpia la lsita de los nodos y datos en el
+*/
+   
 public void clear() 
 {
    head = null;
@@ -74,7 +90,9 @@ public void clear()
    count = 0;
     
 }
-
+/**
+     * devuelve el valor ultimo de la lista
+     */
 public E getLast() 
 {
     return tail.value();
