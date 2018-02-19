@@ -25,10 +25,8 @@ public class HT4Estructuras {
         Calculadora calcu = Calculadora.getInstance();    
         Scanner teclado= new Scanner(System.in);
         
-        //File archivo = new File ("./Fuente.txt");   
-        File archivo = new File ("C:\\Users\\jose\\Desktop\\DISEÑO\\TRABAJOS\\"
-                + "UVG\\3er Semestre\\Estructura de Datos\\HT4\\HT4Estructuras\\"
-                + "HT4Estructuras\\src\\ht4estructuras\\Fuente.txt");
+        File archivo = new File ("./Fuente.txt");   
+        //File archivo = new File ("C:\\Users\\JUMPSTONIK\\Documents\\NetBeansProjects\\HT4Estructuras\\HT4Estructuras\\src\\ht4estructuras\\Fuente.txt");
         
         
         
