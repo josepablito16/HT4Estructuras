@@ -12,23 +12,31 @@ public class SinglyLinkedList<E> extends AbstactList<E>
    protected int count; // list size
    protected Node<E> head; // ref. to first element
 
+   /**
+    * Constructor para la clase lista simple
+    * post: generates an empty list
+    */
    public SinglyLinkedList()
-   // post: generates an empty list
    {
       head = null;
       count = 0;
    }
+   
    /**
      * esto devuelve el valor del tamaño de la lista
      * @return cantidad de datos en la lista
+     * post: returns number of elements in list
      */
    public int size()
-   // post: returns number of elements in list
   {
     return count;
   }
-  /**
-     * agrega un valor al final de la lista
+   
+   /**
+     * Agrega un valor al final de la lista circular
+     * @param value valor a agregar
+     * pre: value non-null
+     * post: adds element to tail of list 
      */
   public void addLast(E value)
   // post: adds value to end of list
@@ -50,16 +58,21 @@ public class SinglyLinkedList<E> extends AbstactList<E>
 	  count+=1;
 	  
    }
-   /**
-     * limpia la lsita de los nodos y datos en el
+   
+  
+    /**
+     * Limpia la lista de los nodos y datos en el
+     *  post: empties list
      */
    public void clear()
    {
        head=null;
        count=0;
    }
-   /**
-     * devuelve el valor ultimo de la lista
+   
+    /**
+     * Devuelve el valor ultimo de la lista
+     * @return el ultimo elemento de la lista
      */
    public E getLast()
    {
@@ -71,9 +84,12 @@ public class SinglyLinkedList<E> extends AbstactList<E>
        
        return (E)node.data;
    }
+   
    /**
-     * remueve el ultimo valor agregado
+     * Remueve el ultimo valor agregado
      * @return devuelve el valor a su nodo
+     * pre: !isEmpty()
+     * post: returns and removes value from tail of list
      */
    public E removeLast()
    {

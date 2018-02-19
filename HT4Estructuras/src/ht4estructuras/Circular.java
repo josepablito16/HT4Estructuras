@@ -11,20 +11,22 @@ public class Circular<E> extends AbstactList<E>
     protected Node<E> tail; 
     protected int count;
 
+    /**
+     * Constructor de la lista circular
+     * pre: constructs a new circular list
+     */
     public Circular()
-    // pre: constructs a new circular list
     {
        tail = null;
        count = 0;
     }
     /**
-     * este metodo se encarga de agregar en la lista cirular el valor como
-     * primero
+     * Este metodo se encarga de agregar en la lista cirular el valor al inicio
      * @param value valor a guardar 
+     * pre: value non-null
+     * post: adds element to head of list
      */
     public void addFirst(E value)
-    // pre: value non-null
-    // post: adds element to head of list
     {
         Node<E> temp = new Node<E>(value);
         if (tail == null) { // first value added
@@ -39,25 +41,25 @@ public class Circular<E> extends AbstactList<E>
     
     @Override
     /**
-     * agrega un valor al final de la lista
+     * Agrega un valor al final de la lista circular
+     * @param value valor a agregar
+     * pre: value non-null
+     * post: adds element to tail of list 
      */
     public void addLast(E value)
-    // pre: value non-null
-    // post: adds element to tail of list
     {
-       // new entry:
        addFirst(value);
        tail = tail.next();  
     }
     
-    // lo dificil es quitar el elemento de la cola
+    
     /**
-     * remueve el ultimo valor agregado
+     * Remueve el ultimo valor agregado
      * @return devuelve el valor a su nodo
+     * pre: !isEmpty()
+     * post: returns and removes value from tail of list
      */
     public E removeLast()
-    // pre: !isEmpty()
-    // post: returns and removes value from tail of list
     {
        Node<E> finger = tail;
        while (finger.next() != tail) {
@@ -78,7 +80,7 @@ public class Circular<E> extends AbstactList<E>
 
     @Override
     /**
-     * limpia la lsita de los nodos y datos en el
+     * Limpia la lista de los nodos y datos en el
      */
     public void clear() 
     {
@@ -88,14 +90,16 @@ public class Circular<E> extends AbstactList<E>
 
     @Override
     /**
-     * devuelve el valor ultimo de la lista
+     * Devuelve el valor ultimo de la lista
+     * @return el ultimo elemento de la lista
      */
     public E getLast() 
     {
         return tail.value();
     }
+    
     /**
-     * esto devuelve el valor del tamaño de la lista
+     * Esto devuelve el valor del tamano de la lista
      * @return cantidad de datos en la lista
      */
     public int size()

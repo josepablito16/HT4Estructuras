@@ -9,33 +9,41 @@ package ht4estructuras;
 public interface List<E> extends Stack<E>
 {
     /**
-     * esto devuelve el valor del tamaño de la lista
+     * Esto devuelve el valor del tamano de la lista
      * @return cantidad de datos en la lista
      */
     public int size();
+    
     /**
-     * limpia la lsita de los nodos y datos en el
+     * Limpia la lista de los nodos y datos en el
+     *  post: empties list
      */
    public void clear();
-   // post: empties list
+   
   
    /**
-     * agrega un valor al final de la lista
+     * Agrega un valor al final de la lista circular
+     * @param value valor a agregar
+     * pre: value non-null
+     * post: adds element to tail of list 
      */
    public void addLast(E value);
-   // post: value is added to end of list
+   
    
    /**
-     * devuelve el valor ultimo de la lista
+     * Devuelve el valor ultimo de la lista
+     * @return el ultimo elemento de la lista
      */
    public E getLast();
+   
    /**
-     * remueve el ultimo valor agregado
+     * Remueve el ultimo valor agregado
      * @return devuelve el valor a su nodo
+     * pre: !isEmpty()
+     * post: returns and removes value from tail of list
      */
    public E removeLast();
-   // pre: list is not empty
-   // post: removes last value from list
+   
    
     
 }

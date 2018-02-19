@@ -11,7 +11,7 @@ public class Factory
     Factory(){}
     /**
      * este es el metodo del diseño de patrones el cual nos devuelve la instancia
-     * del tipo de lista a usar
+     * del tipo de lista a usar dependiendo que ingresa el usuario
      * @param opcion opcion elegida por el usuario
      * @return instancia de lista a usar
      */

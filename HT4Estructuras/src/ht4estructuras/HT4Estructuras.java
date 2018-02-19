@@ -26,9 +26,7 @@ public class HT4Estructuras {
         Scanner teclado= new Scanner(System.in);
         
         File archivo = new File ("./Fuente.txt");   
-        //File archivo = new File ("C:\\Users\\JUMPSTONIK\\Documents\\NetBeansProjects\\HT4Estructuras\\HT4Estructuras\\src\\ht4estructuras\\Fuente.txt");
-        
-        
+
         
         while(true)
         {

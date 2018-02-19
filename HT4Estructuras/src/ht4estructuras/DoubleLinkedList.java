@@ -14,8 +14,11 @@ protected int count;
 protected DoublyLinkedNode<E> head;
 protected DoublyLinkedNode<E> tail;
 
+/**
+ * Constructor de las listas dobles
+ * post: constructs an empty list
+ */
 public DoubleLinkedList()
-// post: constructs an empty list
 {
    head = null;
    tail = null;
@@ -23,13 +26,12 @@ public DoubleLinkedList()
 }
 
     /**
-     * este metodo se encarga de agregar en la lista cirular el valor como
-     * primero
+     * este metodo se encarga de agregar en la lista cirular el valor de primero
      * @param value valor a guardar 
+     * pre: value is not null
+     * post: adds element to head of list
      */
 public void addFirst(E value)
-// pre: value is not null
-// post: adds element to head of list
 {
    // construct a new element, making it head
    head = new DoublyLinkedNode<E>(value, head, null);
@@ -38,12 +40,14 @@ public void addFirst(E value)
    count++;
 }
 
+
 /**
-     * agrega un valor al final de la lista
-     */
+ * Agrega un valor al final de la lista
+ * @param value valor a agregar
+ * pre: value is not null
+ * post: adds new value to tail of list
+ */
 public void addLast(E value)
-// pre: value is not null
-// post: adds new value to tail of list
 {
    // construct new element
    tail = new DoublyLinkedNode<E>(value, null, tail);
@@ -52,14 +56,13 @@ public void addLast(E value)
    count++;
 }
 
-// lo dificil es quitar el elemento de la cola
-    /**
-     * remueve el ultimo valor agregado
+ /**
+     * Remueve el ultimo valor agregado
      * @return devuelve el valor a su nodo
+     * pre: !isEmpty()
+     * post: returns and removes value from tail of list
      */
 public E removeLast()
-// pre: list is not empty
-// post: removes value from tail of list
 {
    DoublyLinkedNode<E> temp = tail;
    tail = tail.previous();
@@ -71,18 +74,20 @@ public E removeLast()
    count--;
    return temp.value();
 }
-/**
-     * esto devuelve el valor del tamaño de la lista
+
+
+    /**
+     * Esto devuelve el valor del tamano de la lista
      * @return cantidad de datos en la lista
      */
 public int size() 
 {
     return count;
 }
-/**
-* limpia la lsita de los nodos y datos en el
-*/
-   
+
+    /**
+     * Limpia la lista de los nodos y datos en el
+     */
 public void clear() 
 {
    head = null;
@@ -90,8 +95,10 @@ public void clear()
    count = 0;
     
 }
-/**
-     * devuelve el valor ultimo de la lista
+
+    /**
+     * Devuelve el valor ultimo de la lista
+     * @return el ultimo elemento de la lista
      */
 public E getLast() 
 {

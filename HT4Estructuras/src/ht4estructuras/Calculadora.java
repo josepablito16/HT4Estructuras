@@ -17,8 +17,9 @@ public class Calculadora
     double n1,n2;
     Factory f=new Factory();
     private static Calculadora calc;
+    
     /**
-     * este es el singleto
+     * Este es un metodo el asegura que solo exista un obejto de este tipo(singleto)
      * @return regresa la isntancia de la clase claculadora
      */
     public static Calculadora getInstance()
@@ -31,14 +32,17 @@ public class Calculadora
         return calc;
     }
     
-    
+    /**
+     * Constructor de la clase calculadora
+     * No lo utilizamos ya que usamos SINGLETO
+     */
     private Calculadora()
     {
     }
     
     /**
-     * en esta clase se ejecutan las operaciones que devolveran el resultado
-     * del texto leido 
+     * En esta clase se ejecutan las operaciones que devolveran el resultado
+     * del archivo de  texto leido 
      * @param expresion expresion a operar
      * @param tipo tipo de stack a utilizar
      * @return valor final de la operacion

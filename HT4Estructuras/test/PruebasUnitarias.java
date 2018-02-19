@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 
-
 import ht4estructuras.Calculadora;
-import ht4estructuras.HT4Estructuras;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,33 +14,10 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author JUMPSTONIK
+ * @author jose
  */
-public class HT4EstructurasTest {
+public class PruebasUnitarias {
     
-    public HT4EstructurasTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-    /**
-     * Test of main method, of class HT4Estructuras.
-     */
-    @Test
     public void testMain() throws Exception {
         String linea = "1 2 + 4 * 3 +";
         String tipo = "3.2";
@@ -51,5 +26,4 @@ public class HT4EstructurasTest {
         Double result = calcu.operar(linea, tipo);
         assertEquals(expResult,result,0.0);
     }
-    
 }
