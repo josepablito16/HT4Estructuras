@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package Circular;
 
 import ht4estructuras.Calculadora;
 import ht4estructuras.HT4Estructuras;
@@ -45,7 +45,7 @@ public class HT4EstructurasTest {
     @Test
     public void testMain() throws Exception {
         String linea = "1 2 + 4 * 3 +";
-        String tipo = "3.2";
+        String tipo = "3.3";
         Double expResult = 15.0;
         Calculadora calcu = Calculadora.getInstance();
         Double result = calcu.operar(linea, tipo);
